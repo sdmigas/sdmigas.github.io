@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cv Website HTML</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo" style="color: #c8d6b1;">Nau mai, Haere mai... Welcome!!</a>
+
+        <nav class="navbar">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html" onclick="window.location.href='about.html'; return false;">About</a>
+            <a href="education.html" onclick="window.location.href='Education.html'; return false;">Education</a>
+            <a href="contact.html" onclick="window.location.href='Contact.html'; return false;">Contact</a>
+            
+        </nav>
+    </header>
+    <style>
+  
+        .header {
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #000000(0, 0, 0, 0.9);
+            color: #fff;
+            z-index: 1000;
+            padding: 10px 0;
+            text-align: center;
+            transition: top 0.3s ease; 
+        }
+
+      
+        .hide-header {
+            top: -100px; 
+        }
+
+   
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #FFFFFF;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            color: #c8d6b1;
+        }
+
+ 
+        .Home {
+            padding: 40px 20px;
+            background-color: #000000;
+            color: #FFFFFF;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .Education-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .Education-content > ul {
+            flex: 1;
+            max-width: 48%;
+            padding: 20px;
+            background-color: #000000;
+            border-radius: 8px;
+        }
+
+        .Education-content h3 {
+            color: #c8d6b1;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .Education-content a {
+            color: #c8d6b1;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+  
+        @media (max-width: 768px) {
+            .Education-content > ul {
+                max-width: 100%;
+            }
+        }
+    </style>
+    
+    <section class="home">
+        <div class="home-content">
+            <h1 class="Home" style="color: #c8d6b1;">Hi, I'm Miguel Fernandes</h1>
+            <h3>Apprentice Website Developer</h3>
+            <p>I have experience in electrical design using DDS-CAD and AutoCAD, and have developed a foundational understanding of programming through Notepad++, Visual Studio, and Python. My skills in these areas enable me to effectively contribute to both design and development projects, with a keen ability to adapt and grow in new technical environments.</p>
+            
+            <div class="btn-box">
+                
+                
+                <a href="skills.html#skills-section" class="btn">Go to Skills</a>
+                <a href="Languages.html#Languages-section" class="btn">Languages</a>
+            </div>
+        </div>
+
+        <div class="home-sci">
+            <a href="https://www.facebook.com" target="_blank"><i class='bx bxl-facebook'></i></a>
+            <a href="https://twitter.com" target="_blank"><i class='bx bxl-twitter'></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class='bx bxl-instagram'></i></a>
+            <a href="https://www.youtube.com" target="_blank"><i class='bx bxl-youtube'></i></a>
+        </div>
+    </section>
+    <div class="footer-content">
+    <footer>
+        
+            <p>&copy; <span id="year"></span> Miguel Fernandes Cv. All Rights Reserved.</p>
+        
+    </footer>
+</div>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cv Website HTML</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo" style="color: #c8d6b1;">Home</a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html"  class="active">About</a>
+            <a href="Education.html">Education</a>
+            <a href="contact.html">Contact</a>
+            <a href="skills.html">Go to Skills</a> 
+            
+            
+    </header>
+    <style>
+
+        .header {
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #000000(0, 0, 0, 0.9);
+            color: #FFFFFF;
+            z-index: 1000;
+            padding: 10px 0;
+            text-align: center;
+            transition: top 0.3s ease; 
+        }
+
+        .hide-header {
+            top: -100px; 
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #FFFFFF;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            color: #c8d6b1;
+        }
+
+        
+        .Home {
+            padding: 40px 20px;
+            background-color: #000000;
+            color: #FFFFFF;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .Education-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .Education-content > ul {
+            flex: 1;
+            max-width: 48%;
+            padding: 20px;
+            background-color: #000000;
+            border-radius: 8px;
+        }
+
+        .Education-content h3 {
+            color: #c8d6b1;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .Education-content a {
+            color: #c8d6b1;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .Education-content > ul {
+                max-width: 100%;
+            }
+        }
+    </style>
+
+    <section class="home">
+        <div class="home-content">
+            <h1 class="details" style="color: #c8d6b1;">Who am I?</h1>
+            <h3 class="details" style="color: #c8d6b1;">Let me tell you...</h3>
+            <p class="p-welcome">
+                <p>I am a native Portuguese speaker with proficiency in Spanish and English, and a basic understanding of French. I hold a certification in Networking, completed in Portugal, which has provided me with a solid foundation in IT systems and troubleshooting. <p>I am someone who is actively learning and growing in the field of web design. While I am relatively new to web design, I already bring some valuable experience in electrical graphic design, which likely gives me a good foundation in visual design principles, layout, and color theory. My knowledge of networks adds an extra layer of technical skill, helping me understand how websites interact with servers and the broader internet.</p><p>Additionally, I have completed AutoCAD Level 1 and Level 2 certifications in New Zealand, gaining a strong understanding of 2D and 3D design, drafting, and modeling. I have further expanded my skill set with experience in SketchUp, DDS-CAD, and other design software, which has enhanced my ability to create detailed and accurate plans for various projects. In recent months, I have been developing my programming skills, learning Python, and exploring software development through Notepad++ and Visual Studio. This has allowed me to deepen my knowledge of coding and problem-solving within technical environments. </p>
+            </p>
+                
+        </div>    
+    </section>
+
+    <footer>
+        <div class="footer-content">
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+
+</html>
+        

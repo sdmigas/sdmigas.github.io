@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cv Website HTML</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+        .header {
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #000000(0, 0, 0, 0.9);
+            color: #fff;
+            z-index: 1000;
+            padding: 10px 0;
+            text-align: center;
+            transition: top 0.3s ease; 
+        }
+
+        
+        .hide-header {
+            top: -100px; 
+        }
+
+        
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #FFFFFF;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            color: #c8d6b1;
+        }
+
+     
+        .Home {
+            padding: 40px 20px;
+            background-color: #000000;
+            color: #FFFFFF;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .Education-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .Education-content > ul {
+            flex: 1;
+            max-width: 48%;
+            padding: 20px;
+            background-color: #111111;
+            border-radius: 8px;
+        }
+
+        .Education-content h3 {
+            color: #c8d6b1;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .Education-content a {
+            color: #c8d6b1;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        
+        @media (max-width: 768px) {
+            .Education-content > ul {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo" style="color: #c8d6b1;">Home</a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="Education.html" class="active">Education</a>
+            <a href="Contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="Home">
+        <div class="Education-content">
+            <ul>
+                <li><h3>2010 -Planeta Informatico - IT Lvl2 (LAN)</h3></li>
+                <li>Instalation of power electrical cables</li>
+                <li>Instalation of data communication</li>
+                <li>Instalation of Central Unit Processor components</li>
+                <li>CPU components test</li>
+                <li>Instalation of different types of interface cards</li>
+                <li>Test of interface cards</li>
+                <li>Instalation of a Local network (LAN)</li>
+                <li>Configuration of a Local network (LAN)</li>
+                <li>CPU malfunction diagnostic</li>
+                <li>Power supply malfunction diagnostic and repair</li>
+                <li>Components malfunction repair</li>
+                <li>Diagnostic of printers</li>
+                <li>Printers malfunction repair</li>
+                <li>Diagnostic on monitors malfunction</li>
+                <li>Repair monitors malfunction</li>
+                <li>Diagnostic and repair peripherals malfunction</li>
+                <li>Planning and maintenance</li>
+                <li>Maintenance of the central unit</li>
+                <li>Peripherals maintenance</li>
+                <a href="https://planetainformatico.pt/" target="_blank">Planeta Informatico</a>
+            </ul>
+
+            <ul>
+                <li><h3>2018/19 -Wintec Te rapa - Auto-Cad Level 1,2 2D</h3></li>
+                <li>Using more advanced editing and construction techniques</li>
+                <li>Adding parametric constraints to objects</li>
+                <li>Creating local and global blocks</li>
+                <li>Setting up layers, styles, and templates</li>
+                <li>Using advanced plotting and publishing options</li>
+                <li>AutoCAD set-up and directory structures</li>
+                <li>Introduction to 3D modelling</li>
+                <li>Wintec City Campus - IT Lvl 5</li>
+                <a href="https://www.wintec.ac.nz/professional-programmes/programme?eventtemplate=62" target="_blank">Wintec</a>
+            </ul>
+
+            <ul>
+                <li><h3>2025 -Wintec City Campus - IT Level 5</h3></li>
+                <h3>COMP501 IT Operations</h3>
+                <li>Explain computer operating systems, configuration, security, and software</li>
+                <li>Configure Windows Operating system on a PC</li>
+                <li>Explain computer hardware, virtualization, cloud computing, and troubleshooting</li>
+                <li>Disassemble and reassemble a PC to working order with an operating system and network services</li>
+           
+                <li><h3>COMP502/2501 Fundamentals of Programming and Problem Solving</h3></li>
+                <li>Differentiate between procedural and object-oriented programming</li>
+                <li>Apply programming concepts and tools</li>
+                <li>Apply the Principles of Implementation to the development of simple applications</li>
+                <li>Use problem-solving and decision-making techniques which include logic and mathematical concepts, problem-solving methods, critical thinking, abstract reasoning, and systems</li>
+            
+                <li><h3>COMP506/2025-01 Interactive Digital Media</h3></li>
+                <li>Create accessible interactive digital media</li>
+                <li>Apply knowledge and concepts of business analysis</li>
+                <li>Apply knowledge and concepts of user experience and interface design</li>
+                <li>Effectively communicate and work in a team</li>
+            
+                <li><h3>INFO507/2501 Fundamentals of Information Systems</h3></li>
+                <li>Demonstrate an understanding of the impact of Information Technology on business functions</li>
+                <li>Apply critical analysis and decision-making techniques to solve an organisational IT problem and provide a timely and relevant solution</li>
+                <li>Apply information and management techniques for the secure storage and retrieval of data and reports from a simple multiple table database to support an organisational process</li>
+                <li>Apply elementary Agile and DevOps principles and teamwork to design and develop a solution</li>
+                <a href="https://www.wintec.ac.nz/study-at-wintec/courses/information-technology/new-zealand-certificate-in-information-technology-(level-5)" target="_blank">Wintec</a>
+            
+        </div>
+    </section>
+
+</body>
+</html>
