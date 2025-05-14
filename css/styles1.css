@@ -1,0 +1,440 @@
+@font-face {
+    font-family: 'Aileron-Local';
+    src: url(../fonts/Aileron-Bold.otf);
+}
+@font-face {
+    font-family: 'Aileron-Local-SemiB';
+    src: url(../fonts/Aileron-SemiBold.otf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Aileron-Local';
+    src: url(../fonts/Aileron-BoldItalic.otf);
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Bebas-Local';
+    src: url(../fonts/BebasNeue-Regular.ttf);
+}
+@font-face {
+    font-family: 'Nobile Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Nobile Regular'), url('../fonts/Nobile-Regular.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Nobile Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Nobile Italic'), url('../fonts/Nobile-Italic.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Nobile Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Nobile Medium'), url('../fonts/Nobile-Medium.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Nobile Medium Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Nobile Medium Italic'), url('../fonts/Nobile-MediumItalic.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Nobile Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Nobile Bold'), url('../fonts/Nobile-Bold.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Nobile Bold Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Nobile Bold Italic'), url('../fonts/Nobile-BoldItalic.woff') format('woff');
+    }
+@keyframes slide-in {
+    from {
+        translate: 100% 0;
+        scale: 200% 1;
+        opacity: 0;
+    }
+      
+    to {
+        translate: 0 0;
+        scale: 100% 1;
+        opacity: 1;
+    }
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    background: #b8d1bc;
+}
+body p{
+    font-family: 'Nobile Regular';
+    padding: 4px;
+    letter-spacing: 0.1em;
+    line-height: 1.2em;
+}
+picture.background img{
+    position: fixed;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+    width: 100vw;
+    z-index: -1;
+}
+div.content-wrapper {
+    width: 100%;
+}
+div.top-nav {
+    display: flex;
+    column-gap: 2em;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 8px;
+    background: #547e58; 
+    height: 6.5em;
+    width:100%;
+    position: absolute;
+    top:0;
+}
+div.nav-image{
+    margin-right: 40em; 
+    
+}
+div.nav-image img {
+    float: left;
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    margin-top: 2em;
+}
+div.nav-image img.nav-text{
+    float: left;
+    height: 150px;
+    width: auto;
+    object-fit: contain;
+    margin-top: 0;
+}
+div.top-nav a{
+    color: rgb(255, 255, 255);
+    display: block;
+    font-size: 1.4em;
+    text-decoration: none;
+    transition: 1s;
+    font-family: 'Aileron-Local-SemiB';
+    font-weight: bold;
+}
+div.top-nav a:hover{
+    text-decoration: underline;
+    color:rgb(220, 220, 220);
+}
+div.top-nav a.active {
+    text-decoration: underline;
+    color:rgb(212, 212, 212);
+}
+div.header {
+    margin-top: 6.5em;
+    height: fit-content;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    
+}
+div.cta-button{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 350px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+div.cta-button button{
+    font-family: 'Aileron-Local-SemiB';
+    background: linear-gradient(to left, #25602a 50%, #90d4ff 50%) right;
+    background-size: 200% 100%;
+    color: #ffffff;
+    border-radius: 25px;
+    border: 2px #ffffff solid;
+    width: 20em;
+    height: 2.5em;
+    font-size: 1.1em;
+    padding: 6px;
+    transition: 1s ease;
+}
+div.cta-button button:hover{
+    cursor: pointer;
+    background-position: left;
+    color: black;
+}
+div.logo{
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 6em;
+    width: auto;
+    text-align: center;
+    align-content: center;
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.574);
+    box-shadow: 0 0 25px 40px rgba(0, 0, 0, 0.574);
+    
+}
+div.logo p{
+    font-size: 2em;
+    font-family: 'Nobile Medium';
+}
+div.logo h1.hide{
+    display: none;
+}
+div.logo h1.show{
+       font-family: 'Aileron-Local';
+       font-weight: bold;
+       font-style: italic;
+       font-size: 3em;
+}
+div.logo h2{
+       font-size: 3em;
+       font-family: 'Aileron-Local';
+       font-weight: bold;
+       font-style: italic;
+}
+div.slideshow-container{
+    text-align: center;
+    width: 60%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px;
+    background: #ffffffb0;
+    border-radius: 25px;
+    height: 200px;
+}
+div.slideshow-container button{
+    font-family: 'Aileron-Local-SemiB';
+    background: linear-gradient(to left, #25602a 50%, #90d4ff 50%) right;
+    background-size: 200% 100%;
+    color: #ffffff;
+    border-radius: 25px;
+    border: 2px #ffffff solid;
+    width: 10em;
+    height: 2.5em;
+    font-size: 2em;
+    padding: 6px;
+    transition: 1s ease;
+}
+div.slideshow-container button:hover {
+    cursor: pointer;
+    background-position: left;
+    color: black;
+}
+div.slideshow-container p{
+    color: rgb(0, 0, 0);
+    margin-left: 2em;
+    margin-right: 2em;
+    font-size: 1.6em;
+    transition: 2s;
+}
+.mySlides1 {
+    display: none;
+}
+div.side-by-side {
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+div.side-by-side picture {
+    align-self: center;
+}
+div.side-by-side picture img {
+    border-radius: 15px;
+    border: 2px black solid;
+    height: 100px;
+    align-items: center;
+}
+.slide-in {
+    animation-duration: 1.5s;
+    animation-name: slide-in;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    background-color: #547e58;
+    top: 50%;
+    width: auto;
+    margin-top: 0px;
+    padding: 16px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next {
+    right: 4px;
+    border-radius: 50%;
+}
+.prev {
+    left: 4px;
+    border-radius: 50%;
+}
+.prev:hover, .next:hover {
+    background-color: #547e58;
+    background: #92b095d2;
+    color: rgb(0, 0, 0);
+}
+div.section{
+    width: 100%;
+    background: #92b095;
+    background-image: url("../images/koru.webp");
+    background-position: bottom 0px right 0px;
+    background-size:contain;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    height: fit-content;
+}
+
+.section-picture-view {
+    height: 100vh;
+    background: transparent;
+}
+div.background-wrapper{
+    background: #92b095;
+    background-image: url("../images/koru.webp");
+    background-position: bottom 0px right 0px;
+    background-size:contain;
+    background-repeat: no-repeat;
+    
+    height: fit-content;
+}
+div.section-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1.5em;
+    column-gap: 1em;
+    background: transparent;
+    color: #ffffff;
+    padding: 30px;
+}
+
+.two{
+    width: 60%;
+    text-align: center;
+}
+div.flex-container {
+    text-align: center;
+    padding: 10px;
+}
+div.flex-container-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    padding: 0 8px;
+    text-align: center;
+    color: black;
+}
+a.link-arrow {
+    font-size: 2em;
+    font-family: 'Aileron-Local';
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    transition: 0.8s;
+
+}
+.link-arrow p {
+    display: inline-block;
+    transition: 0.4s ease-in;
+}
+a.link-arrow:hover {
+    color: #414141;
+}
+.link-arrow:hover p {
+    transform: translateX(50%);
+    color: #414141;
+}
+h2.home-page {
+    color: black;
+    text-decoration: none;
+    font-size: 3em;
+    text-decoration: none;
+}
+div.flex-container p{
+    font-family: 'Nobile Regular';
+    color: black;
+}
+div.flex-container ul{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    color: black;
+    list-style-position: inside;
+    font-family: 'Nobile Regular';
+}
+div.flex-container h3, div.flex-container h2 {
+    color: black;
+    font-weight: bold;
+    font-family: 'Aileron-Local';
+}
+.one{
+    width: 40%;
+}
+div.no-background {
+    background-image: none;
+    background: #00000039;
+    color: rgb(255, 255, 255);
+}
+.wide{
+    width: 100%;
+}
+div.white-line {
+    height: 2px;
+    width: 90%;
+    margin: auto;
+    background: white;
+}
+div.footer{
+    padding: 2em;
+    background: #414141;
+    width: 100%;
+    text-align: center;
+}
+div.footer p {
+    margin-bottom: 0;
+    color: white;
+    font-family: 'Nobile Medium';
+
+}
+div.search-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 2em;
+    text-align: center;
+}
+input {
+    font-size: 1rem;
+    width: 50%;
+    margin: auto;
+}
+.hide {
+    display: none;
+}
