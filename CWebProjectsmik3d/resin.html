@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <title>Resin Printing - MIK3D STUDIOS</title>
+
+  <style>
+    /* Background gradient */
+    body {
+      background: linear-gradient(-45deg, #000000, #0a0f1f, #001f2f, #000000);
+      background-size: 400% 400%;
+      animation: gradientMove 12s ease infinite;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Glow */
+    .logo-glow {
+      filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.6));
+    }
+
+    /* Glass effect */
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  </style>
+</head>
+
+<body class="text-white p-10">
+
+  <!-- Back Button -->
+  <a href="index.html" class="text-cyan-400 hover:text-white text-lg">← Back to Home</a>
+
+  <!-- Header -->
+  <div class="text-center mt-10">
+    <img src="logo1.png" class="w-32 mx-auto mb-6 logo-glow">
+    <h1 class="text-5xl font-extrabold">Resin Printing</h1>
+    <p class="text-gray-300 mt-4 max-w-2xl mx-auto">
+      Resin printing delivers ultra‑high detail, smooth surfaces, and professional‑grade 
+      finishes. Ideal for miniatures, collectibles, display models, and anything requiring 
+      precision and sharp detail.
+    </p>
+  </div>
+
+  <!-- Features Section -->
+  <section class="max-w-4xl mx-auto mt-16 grid md:grid-cols-3 gap-8">
+
+    <div class="glass p-6 rounded-2xl text-center">
+      <h3 class="text-xl font-bold mb-2">Ultra Fine Detail</h3>
+      <p class="text-gray-300 text-sm">Perfect for miniatures and collectibles.</p>
+    </div>
+
+    <div class="glass p-6 rounded-2xl text-center">
+      <h3 class="text-xl font-bold mb-2">Smooth Surfaces</h3>
+      <p class="text-gray-300 text-sm">Minimal layer lines for premium results.</p>
+    </div>
+
+    <div class="glass p-6 rounded-2xl text-center">
+      <h3 class="text-xl font-bold mb-2">High Precision</h3>
+      <p class="text-gray-300 text-sm">Ideal for detailed and artistic prints.</p>
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <div class="text-center mt-16">
+    <a href="index.html#order" 
+       class="px-10 py-4 bg-cyan-500 rounded-2xl hover:scale-110 transition inline-block">
+      Start Your Order
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center text-gray-400 mt-20 border-t border-white/10 pt-6">
+    © 2026 Mik3DStudios
+  </footer>
+
+</body>
+</html>

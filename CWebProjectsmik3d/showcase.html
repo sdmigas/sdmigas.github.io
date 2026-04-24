@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <title>Showcase - MIK3D STUDIOS</title>
+
+  <style>
+    /* Glass effect */
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Neon glow */
+    .logo-glow {
+      filter: drop-shadow(0 0 25px rgba(0, 255, 255, 0.8));
+    }
+
+    /* Background */
+    body {
+      background: linear-gradient(-45deg, #000000, #0a0f1f, #001f2f, #000000);
+      background-size: 400% 400%;
+      animation: gradientMove 12s ease infinite;
+      overflow-x: hidden;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Animated header */
+    @keyframes headerGlow {
+      0% { text-shadow: 0 0 10px cyan; opacity: 0; transform: translateY(20px); }
+      100% { text-shadow: 0 0 25px cyan; opacity: 1; transform: translateY(0); }
+    }
+    .animate-header {
+      animation: headerGlow 1.5s ease forwards;
+    }
+
+    /* Lightbox */
+    #lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+    #lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 12px;
+      box-shadow: 0 0 25px cyan;
+    }
+
+    /* Before/After slider */
+    #sliderHandle {
+      transition: background 0.2s;
+    }
+    #sliderHandle:hover {
+      background: white;
+    }
+
+    /* Parallax */
+    .parallax {
+      transform: translateY(var(--parallax-offset));
+    }
+
+    /* Neon Footer */
+    .footer-neon {
+      background: rgba(0, 0, 0, 0.6);
+      border-top: 2px solid cyan;
+      box-shadow: 0 -0px 25px cyan;
+    }
+  </style>
+</head>
+
+<body class="text-white">
+
+<!-- LIGHTBOX -->
+<div id="lightbox"><img id="lightbox-img"></div>
+
+<!-- HEADER -->
+<div class="w-full bg-black/40 backdrop-blur-xl border-b border-white/10 py-3 fixed top-0 left-0 z-50">
+  <div class="max-w-6xl mx-auto flex justify-between items-center px-4">
+
+    <!-- Left -->
+    <div class="flex items-center gap-4">
+      <img src="logo1.png" class="w-10 logo-glow">
+      <span class="text-xl font-bold tracking-wide">MIK3D STUDIOS</span>
+    </div>
+
+    <!-- Right -->
+    <div class="flex items-center gap-6 text-lg">
+      <a href="index.html" class="hover:text-cyan-400 transition">Home</a>
+      <a href="services-showcase.html" class="hover:text-cyan-400 transition">Showcase</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="text-center py-32 parallax" style="--parallax-offset: 0px;">
+  <img src="logo1.png" class="w-48 mx-auto mb-10 logo-glow">
+  <h1 class="text-5xl font-extrabold animate-header">Showcase</h1>
+  <p class="text-gray-300 mt-4">Explore our work, transformations, and behind-the-scenes process</p>
+</section>
+
+<!-- GALLERY -->
+<section class="max-w-6xl mx-auto mt-20 px-6">
+  <h2 class="text-4xl font-bold text-center mb-10 animate-header">Gallery</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <img src="sample1.jpg" class="rounded-xl shadow-lg hover:scale-105 transition gallery-img">
+    <img src="sample2.jpg" class="rounded-xl shadow-lg hover:scale-105 transition gallery-img">
+    <img src="sample3.jpg" class="rounded-xl shadow-lg hover:scale-105 transition gallery-img">
+    <img src="sample4.jpg" class="rounded-xl shadow-lg hover:scale-105 transition gallery-img">
+    <img src="sample5.jpg" class="rounded-xl shadow-lg hover:scale-105 transition gallery-img">
+    <img src="sample6.jpg" class="rounded-xl shadow-lg hover:scale-105 transition gallery-img">
+  </div>
+</section>
+
+<!-- VIDEO SECTION -->
+<section class="max-w-5xl mx-auto mt-20 px-6 text-center">
+  <h2 class="text-4xl font-bold mb-10 animate-header">Behind The Scenes</h2>
+
+  <video controls class="w-full rounded-2xl shadow-xl">
+    <source src="yourvideo.mp4" type="video/mp4">
+  </video>
+</section>
+
+<!-- BEFORE / AFTER SLIDER -->
+<section class="max-w-4xl mx-auto mt-20 px-6">
+  <h2 class="text-4xl font-bold text-center mb-10 animate-header">Before & After</h2>
+
+  <div class="relative w-full overflow-hidden rounded-xl">
+    <img src="before.jpg" class="w-full block">
+    <div id="afterWrapper" class="absolute top-0 left-0 h-full overflow-hidden" style="width:50%;">
+      <img src="after.jpg" class="w-full block">
+    </div>
+    <div id="sliderHandle" class="absolute top-0 left-1/2 w-1 bg-cyan-400 h-full cursor-ew-resize"></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="max-w-5xl mx-auto mt-20 px-6">
+  <h2 class="text-4xl font-bold text-center mb-10 animate-header">Customer Testimonials</h2>
+
+  <div class="grid md:grid-cols-3 gap-8">
+    <div class="glass p-6 rounded-2xl">
+      <p class="text-gray-300">“Amazing quality! The details were insane.”</p>
+      <h4 class="mt-4 font-bold text-cyan-400">— Alex</h4>
+    </div>
+
+    <div class="glass p-6 rounded-2xl">
+      <p class="text-gray-300">“Fast turnaround and super clean prints.”</p>
+      <h4 class="mt-4 font-bold text-cyan-400">— Jordan</h4>
+    </div>
+
+    <div class="glass p-6 rounded-2xl">
+      <p class="text-gray-300">“Painting service was next‑level professional.”</p>
+      <h4 class="mt-4 font-bold text-cyan-400">— Sam</h4>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON CHART -->
+<section class="max-w-4xl mx-auto mt-20 px-6">
+  <h2 class="text-4xl font-bold text-center mb-10 animate-header">FDM vs Resin</h2>
+
+  <div class="grid md:grid-cols-2 gap-8">
+    <div class="glass p-6 rounded-2xl">
+      <h3 class="text-2xl font-bold mb-4 text-cyan-400">FDM Printing</h3>
+      <ul class="text-gray-300 space-y-2">
+        <li>✔ Strong & durable</li>
+        <li>✔ Large prints</li>
+        <li>✔ Cost‑effective</li>
+        <li>✔ Great for prototypes</li>
+      </ul>
+    </div>
+
+    <div class="glass p-6 rounded-2xl">
+      <h3 class="text-2xl font-bold mb-4 text-purple-400">Resin Printing</h3>
+      <ul class="text-gray-300 space-y-2">
+        <li>✔ Ultra‑high detail</li>
+        <li>✔ Smooth surfaces</li>
+        <li>✔ Best for miniatures</li>
+        <li>✔ Display‑quality results</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer-neon text-center p-10 text-gray-300 mt-20">
+  <div class="flex justify-center gap-10 text-3xl mb-6">
+    <a href="#" class="hover:text-cyan-400 transition">🐦</a>
+    <a href="#" class="hover:text-cyan-400 transition">📸</a>
+    <a href="#" class="hover:text-cyan-400 transition">🎨</a>
+  </div>
+
+  <p class="text-lg tracking-wide">© 2026 Mik3DStudios — Crafted with passion & neon</p>
+</footer>
+
+<script>
+  // Lightbox
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const galleryImgs = document.querySelectorAll(".gallery-img");
+
+  galleryImgs.forEach(img => {
+    img.addEventListener("click", () => {
+      lightbox.style.display = "flex";
+      lightboxImg.src = img.src;
+    });
+  });
+
+  lightbox.addEventListener("click", () => {
+    lightbox.style.display = "none";
+  });
+
+  // Before/After Slider
+  const wrapper = document.getElementById("afterWrapper");
+  const handle = document.getElementById("sliderHandle");
+
+  document.addEventListener("mousemove", (e) => {
+    if (e.buttons === 1) {
+      const rect = wrapper.parentElement.getBoundingClientRect();
+      let x = e.clientX - rect.left;
+      x = Math.max(0, Math.min(x, rect.width));
+      wrapper.style.width = x + "px";
+      handle.style.left = x + "px";
+    }
+  });
+
+  // Parallax
+  window.addEventListener("scroll", () => {
+    const scrolled = window.scrollY;
+    document.querySelectorAll(".parallax").forEach(el => {
+      el.style.setProperty("--parallax-offset", scrolled * -0.1 + "px");
+    });
+  });
+</script>
+
+</body>
+</html>
